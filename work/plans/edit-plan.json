@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+  "basis": {
+    "mediaInfo": "work/media/source-media-info.json",
+    "transcript": "work/transcripts/mlx/source-audio.json",
+    "sampleFrames": "work/frames/source-samples-v1"
+  },
+  "timeline": "source",
+  "target": {
+    "style": "minimal approved base cut",
+    "estimatedDurationSeconds": {
+      "min": 813,
+      "max": 814
+    },
+    "notes": [
+      "Preserve the source aspect ratio unless a separate output format is requested.",
+      "Do not add visual effects before the base content cut is approved.",
+      "Regenerate final subtitles from edited audio after the base cut."
+    ]
+  },
+  "segments": [
+    {
+      "id": "segment-001",
+      "sourceStart": 0,
+      "sourceEnd": 790.36,
+      "action": "keep",
+      "reason": "Main argument and Web Access demo reach a natural close."
+    },
+    {
+      "id": "segment-002",
+      "sourceStart": 790.36,
+      "sourceEnd": 994.24,
+      "action": "remove",
+      "reason": "Implementation tangent and second demo after the argument has closed."
+    },
+    {
+      "id": "segment-003",
+      "sourceStart": 994.24,
+      "sourceEnd": 1017.3755,
+      "action": "keep",
+      "reason": "Outro and next-video framing."
+    }
+  ],
+  "overlays": [],
+  "review": [
+    {
+      "sourceStart": 790.36,
+      "sourceEnd": 994.24,
+      "reason": "Approved for removal by user."
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "version": 5,
+  "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+  "output": "work/base-cut-v7-audio-light-v1.mp4",
+  "createdAt": "2026-07-17 CST",
+  "previousOutput": "work/base-cut-v4-audio-light-v1.mp4",
+  "operations": [
+    {
+      "type": "trim_start",
+      "editedTimelineStart": 0,
+      "editedTimelineEnd": 1.02,
+      "reason": "Drops the leading filler word 其实 so the video opens on 我真正用AI Agent. The word occupies v4 0-0.68 and is followed by a 0.56s pause, so the 1.02 cut lands in silence and leaves a 0.22s lead-in before the next word at v4 1.24."
+    },
+    {
+      "type": "speed_up",
+      "editedTimelineStart": 420.0,
+      "editedTimelineEnd": 507.291667,
+      "speed": 5,
+      "audio": "silenced",
+      "subtitles": "dropped",
+      "reason": "The agent is waiting on page loads and reading; nothing is said that the narration needs. User picked the range in DaVinci on a 24fps timeline (07:00 to 08:27:07). Both cut points sit inside silence -- silencedetect puts the tail one in the middle of a 5.7s gap, 1.46s clear of the next line -- so no speech is clipped."
+    }
+  ],
+  "notes": [
+    "Both edits are applied to v4 in a single ffmpeg pass, so v7 is one generation from v4, not two. v6 was the speed-up-only intermediate and has been removed.",
+    "Cuts are by time, not frame index: the master is VFR (avg 37.94fps, 27113 frames over 714.653s) and its r_frame_rate=120 is only the container timebase."
+  ],
+  "segments": [
+    {
+      "id": "segment-001",
+      "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+      "sourceStart": 44.66,
+      "sourceEnd": 92.12,
+      "editedStart": 0,
+      "editedEnd": 47.46,
+      "speed": 1
+    },
+    {
+      "id": "segment-002a",
+      "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+      "sourceStart": 123.02,
+      "sourceEnd": 494.54,
+      "editedStart": 47.46,
+      "editedEnd": 418.98,
+      "speed": 1
+    },
+    {
+      "id": "segment-002b",
+      "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+      "sourceStart": 494.54,
+      "sourceEnd": 581.831667,
+      "editedStart": 418.98,
+      "editedEnd": 436.438333,
+      "speed": 5,
+      "audio": "silenced"
+    },
+    {
+      "id": "segment-002c",
+      "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+      "sourceStart": 581.831667,
+      "sourceEnd": 766.02,
+      "editedStart": 436.438333,
+      "editedEnd": 620.626667,
+      "speed": 1
+    },
+    {
+      "id": "segment-003",
+      "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+      "sourceStart": 994.24,
+      "sourceEnd": 1017.3755,
+      "editedStart": 620.626667,
+      "editedEnd": 643.762167,
+      "speed": 1
+    }
+  ],
+  "removed": [
+    {
+      "sourceStart": 0,
+      "sourceEnd": 43.64,
+      "duration": 43.64,
+      "reason": "Opening removed; video now starts directly at the stronger setup without a residual sentence tail."
+    },
+    {
+      "sourceStart": 43.64,
+      "sourceEnd": 44.66,
+      "duration": 1.02,
+      "reason": "Leading filler word 其实."
+    },
+    {
+      "sourceStart": 92.12,
+      "sourceEnd": 123.02,
+      "duration": 30.9,
+      "reason": "Repeated caveat about audience confusion; slows opening."
+    },
+    {
+      "sourceStart": 766.02,
+      "sourceEnd": 790.36,
+      "duration": 24.34,
+      "reason": "Extra examples after the two-ability conclusion."
+    },
+    {
+      "sourceStart": 790.36,
+      "sourceEnd": 994.24,
+      "duration": 203.88,
+      "reason": "Implementation tangent and second demo after the argument has closed."
+    }
+  ],
+  "subtitleNotes": [
+    {
+      "v4Range": "0-5.4",
+      "issue": "Line leads with 其实, which v7 cuts.",
+      "action": "Text changed to 我真正用AI Agent也是从OpenClaw（龙虾）; start moved to the measured onset of the next word (v4 1.24 -> v7 0.22)."
+    },
+    {
+      "v4Range": "496.88-524.88",
+      "issue": "Whisper merged a 6.7s silence into the head of this segment. silencedetect on the v4 audio shows 496.13-508.75 is silent apart from two sub-0.25s clicks; sustained speech starts at 509.49.",
+      "action": "Start retimed to 509.49 before remapping, which also keeps the line out of the sped range."
+    }
+  ]
+}

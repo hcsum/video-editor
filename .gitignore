@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+.venv/
+
+# OS
+.DS_Store
+
+# --- Keep folder structure, ignore heavy contents ---
+
+# Source media — huge originals, never commit
+input/*
+!input/.gitkeep
+
+# Renders & exports
+output/*
+!output/.gitkeep
+out/*
+!out/.gitkeep
+
+# Large generated frame / preview / intermediate-media dirs
+work/frames/*
+!work/frames/.gitkeep
+work/preview-frames/*
+!work/preview-frames/.gitkeep
+work/checks/*
+!work/checks/.gitkeep
+work/audio/*
+!work/audio/.gitkeep
+work/audio-clean-previews/*
+!work/audio-clean-previews/.gitkeep
+
+# Remotion proxy/asset media
+public/assets/*
+!public/assets/.gitkeep
+
+# Heavy media artifacts anywhere else (keep code, transcripts, plans, scripts, json)
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.m4a

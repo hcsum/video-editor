@@ -1,0 +1,27 @@
+{
+  "name": "video-editor",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "remotion:studio": "remotion studio remotion/src/index.ts",
+    "remotion:compositions": "remotion compositions remotion/src/index.ts",
+    "remotion:versions": "remotion versions",
+    "remotion:still": "remotion still remotion/src/index.ts FinalVideo",
+    "remotion:render": "remotion render remotion/src/index.ts FinalVideo output/final-v1.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --concurrency=8"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@remotion/cli": "^4.0.489",
+    "@remotion/renderer": "^4.0.489",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "remotion": "^4.0.489",
+    "typescript": "^5.9.3"
+  }
+}

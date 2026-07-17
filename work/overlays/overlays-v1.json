@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "timeline": "work/base-cut-v4-audio-light-v1.mp4",
+  "note": "All times are on the v4 edited timeline, in seconds. Anchors are fractions of the displayed video rectangle (not the 1920x1080 canvas), so they stay correct whatever the render resolution is.",
+  "video": {
+    "width": 3024,
+    "height": 1964
+  },
+  "overlays": [
+    {
+      "id": "title",
+      "type": "title",
+      "start": 0.4,
+      "end": 12,
+      "sourceNote": "00:00 title",
+      "kicker": "AI Agent workflow",
+      "title": "我是如何使用 AI Agent当个人助理的",
+      "subtitle": "不是拿来写代码 —— 是当个人助理"
+    },
+    {
+      "id": "agent-types",
+      "type": "compare",
+      "start": 64.9,
+      "end": 94.5,
+      "sourceNote": "两类 agent，带 GUI 的 / 不带 GUI 的（TUI）。每个框跟着口播出现：GUI 框 63.90，讲『但是我今天聊的呢』时出 TUI 框（79.40），讲『没有交互界面的』时 TUI 框开始高亮（83.98）。GUI 框里三个 chip 在被点名时 border 闪一下并保持点亮：Workbuddy 65.60 / Manus 67.22 / Claude Desktop 71.70——这三个是 word-timestamps 实测发音起点减 0.05（闪光 0.12s 到峰，峰值压在词上）；别信 Whisper 的段落戳，原来的 64.90/66.30/70.16 分别早了 0.76/0.98/1.60 秒。GUI 框在 88.50 淡出——『它不是腾讯Workbuddy那种』（85.00-87.98）还在反指它，讲完才撤；TUI 框独留到 94.50，下一话题 94.92 开口。",
+      "anchor": {
+        "x": 0.05,
+        "y": 0.35,
+        "width": 0.9
+      },
+      "boxes": [
+        {
+          "id": "gui",
+          "label": "第一类",
+          "title": "有图形交互界面（GUI）",
+          "items": [
+            {
+              "text": "WorkBuddy",
+              "namedAt": 65.6
+            },
+            {
+              "text": "Manus",
+              "namedAt": 67.22
+            },
+            {
+              "text": "Claude Desktop",
+              "namedAt": 71.7
+            }
+          ],
+          "revealAt": 63.9,
+          "hideAt": 88.5
+        },
+        {
+          "id": "tui",
+          "label": "第二类",
+          "title": "活在终端里，没有图形交互界面（TUI）",
+          "items": [
+            "OpenCode",
+            "Claude Code",
+            "Codex"
+          ],
+          "note": "两类能做的事情是一样的，今天聊的是TUI这一类",
+          "revealAt": 79.4,
+          "highlightAt": 83.98
+        }
+      ]
+    },
+    {
+      "id": "correction-model",
+      "type": "note",
+      "start": 189,
+      "end": 198,
+      "sourceNote": "03:54-03:58 更正一下",
+      "anchor": {
+        "x": 0.06,
+        "y": 0.1,
+        "width": 0.6
+      },
+      "label": "更正一下",
+      "text": "大模型能力对个人助理 AI Agent 的使用体验，还是影响挺大的，建议选Agent能力强的模型，最近Kimi好像不错。",
+      "scale": 1.35
+    },
+    {
+      "id": "stable-folder",
+      "type": "card",
+      "start": 203.36,
+      "end": 220,
+      "sourceNote": "04:07-04:10 给一个固定的文件夹",
+      "anchor": {
+        "x": 0.06,
+        "y": 0.1,
+        "width": 0.6
+      },
+      "kicker": "能力一",
+      "title": "给它一个固定的文件夹，让 Agent 能在里面写入跟读取",
+      "lines": [
+        "这样就算跨回话也能让Agent快速找到之前的背景，并且你可以随时去修改文件，确保记忆不跑偏"
+      ],
+      "scale": 1.35
+    },
+    {
+      "id": "blur-user-md",
+      "type": "blur",
+      "start": 225.36,
+      "end": 252.36,
+      "sourceNote": "04:29-04:56 模糊掉编辑器右边（展示了 user.md）。第三块是左下角 OUTLINE 面板：它列出了 user.md 的小节标题（含 Investment portfolio），跟编辑器一样会泄露内容。",
+      "blurPx": 26,
+      "rects": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "width": 0.675,
+          "height": 0.653
+        },
+        {
+          "x": 0.325,
+          "y": 0.076,
+          "width": 0.393,
+          "height": 0.249
+        },
+        {
+          "x": 0.0,
+          "y": 0.818,
+          "width": 0.325,
+          "height": 0.16
+        }
+      ]
+    },
+    {
+      "id": "web-access",
+      "type": "card",
+      "start": 306.36,
+      "end": 320,
+      "sourceNote": "05:50-05:54 让 agent 具备联网的能力",
+      "anchor": {
+        "x": 0.3,
+        "y": 0.36,
+        "width": 0.62
+      },
+      "kicker": "能力二",
+      "title": "给它操作外部的能力",
+      "lines": [
+        "联网 · Excel · Blender · Figma…",
+        "看你更需要它辅助哪方面",
+        "有了能力，就能用自然语言让它替你做事"
+      ],
+      "footnote": "这里以浏览器为例",
+      "scale": 1.35
+    },
+    {
+      "id": "speed-waiting",
+      "type": "speed",
+      "start": 420.0,
+      "end": 507.291667,
+      "sourceNote": "5x sped waiting stretch; the badge spans it exactly",
+      "anchor": {
+        "x": 0.33,
+        "y": 0.05,
+        "width": 0.34
+      },
+      "label": "倍速播放中",
+      "place": "center"
+    },
+    {
+      "id": "summary",
+      "type": "card",
+      "start": 664.28,
+      "end": 691.76,
+      "sourceNote": "11:50 总结 UI",
+      "anchor": {
+        "x": 0.04,
+        "y": 0.07,
+        "width": 0.66
+      },
+      "kicker": "总结",
+      "title": "只需要给 Agent 两个能力",
+      "steps": [
+        {
+          "index": "1",
+          "text": "一个能存放跨会话持久信息的地方",
+          "hint": "每次开新对话都能稳定抓取"
+        },
+        {
+          "index": "2",
+          "text": "操作外部的能力",
+          "hint": "浏览器、Excel、Figma、Blender…",
+          "revealAt": 679.66
+        }
+      ],
+      "scale": 1.35
+    }
+  ]
+}

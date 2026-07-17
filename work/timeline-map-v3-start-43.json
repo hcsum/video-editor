@@ -1,0 +1,68 @@
+{
+  "version": 2,
+  "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+  "output": "work/base-cut-v3-audio-light-v1.mp4",
+  "createdAt": "2026-07-16 CST",
+  "previousOutput": "work/base-cut-v2-audio-light-v1.mp4",
+  "operation": {
+    "type": "trim_start",
+    "editedTimelineStartRemoved": 0,
+    "editedTimelineEndRemoved": 43,
+    "reason": "Start directly at the stronger AI Agent setup point."
+  },
+  "segments": [
+    {
+      "id": "segment-001",
+      "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+      "sourceStart": 43,
+      "sourceEnd": 92.12,
+      "editedStart": 0,
+      "editedEnd": 49.12,
+      "speed": 1
+    },
+    {
+      "id": "segment-002",
+      "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+      "sourceStart": 123.02,
+      "sourceEnd": 766.02,
+      "editedStart": 49.12,
+      "editedEnd": 692.12,
+      "speed": 1
+    },
+    {
+      "id": "segment-003",
+      "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+      "sourceStart": 994.24,
+      "sourceEnd": 1017.3755,
+      "editedStart": 692.12,
+      "editedEnd": 715.2555,
+      "speed": 1
+    }
+  ],
+  "removed": [
+    {
+      "sourceStart": 0,
+      "sourceEnd": 43,
+      "duration": 43,
+      "reason": "Opening removed; video now starts directly at the stronger setup."
+    },
+    {
+      "sourceStart": 92.12,
+      "sourceEnd": 123.02,
+      "duration": 30.9,
+      "reason": "Repeated caveat about audience confusion; slows opening."
+    },
+    {
+      "sourceStart": 766.02,
+      "sourceEnd": 790.36,
+      "duration": 24.34,
+      "reason": "Extra examples after the two-ability conclusion."
+    },
+    {
+      "sourceStart": 790.36,
+      "sourceEnd": 994.24,
+      "duration": 203.88,
+      "reason": "Implementation tangent and second demo after the argument has closed."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+  "output": "work/base-cut-v2.mp4",
+  "createdAt": "2026-07-15 23:00:00 CST",
+  "previousOutput": "work/base-cut-v1.mp4",
+  "segments": [
+    {
+      "id": "segment-001",
+      "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+      "sourceStart": 0,
+      "sourceEnd": 92.12,
+      "editedStart": 0,
+      "editedEnd": 92.12,
+      "speed": 1
+    },
+    {
+      "id": "segment-002",
+      "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+      "sourceStart": 123.02,
+      "sourceEnd": 766.02,
+      "editedStart": 92.12,
+      "editedEnd": 735.12,
+      "speed": 1
+    },
+    {
+      "id": "segment-003",
+      "source": "input/Screen Recording 2026-07-15 at 12.36.24.mov",
+      "sourceStart": 994.24,
+      "sourceEnd": 1017.3755,
+      "editedStart": 735.12,
+      "editedEnd": 758.2555,
+      "speed": 1
+    }
+  ],
+  "removed": [
+    {
+      "sourceStart": 92.12,
+      "sourceEnd": 123.02,
+      "duration": 30.9,
+      "reason": "Repeated caveat about audience confusion; slows opening."
+    },
+    {
+      "sourceStart": 766.02,
+      "sourceEnd": 790.36,
+      "duration": 24.34,
+      "reason": "Extra examples after the two-ability conclusion."
+    },
+    {
+      "sourceStart": 790.36,
+      "sourceEnd": 994.24,
+      "duration": 203.88,
+      "reason": "Implementation tangent and second demo after the argument has closed."
+    }
+  ]
+}
